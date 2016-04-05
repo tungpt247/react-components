@@ -1,12 +1,7 @@
 import '../stylesheets/index.scss'
 
 import React from 'react'
-import ReactDom from 'react-dom'
-import {Alert} from '../src/components'
+import {render} from 'react-dom'
+import {AppDemo} from './demos'
 
-ReactDom.render(
-    <Alert type="warning">
-      <h4>Heading</h4>
-      <strong>Error:</strong> You need to take action, something has gone terribly wrong!
-    </Alert>
-, document.getElementById('root'))
+render(<AppDemo />, document.getElementById('root'))
