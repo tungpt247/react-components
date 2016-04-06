@@ -10,17 +10,13 @@ $slider-handle-fill-background-color: #1ecd97;
 
   &__fill,
   &__handle {
+    background: $slider-handle-fill-background-color;
+    border-radius: 20px;
     position: absolute;
-  }
-
-  &,
-  &__fill {
-    display: block;
   }
 
   &__handle {
     background: darken($slider-handle-fill-background-color, 5);
-    border: 1px solid $slider-border-color;
     cursor: pointer;
     display: inline-block;
 
@@ -29,22 +25,39 @@ $slider-handle-fill-background-color: #1ecd97;
     }
   }
 
+  &-horizontal,
+  &-vertical {
+    border-radius: 20px;
+  }
+
   &-horizontal {
-    border-radius: 10px;
     height: 20px;
 
     .Slider__fill {
-      background: $slider-handle-fill-background-color;
-      border-radius: 10px;
       height: 100%;
-      top: 0;
     }
 
     .Slider__handle {
-      border-radius: 40px;
       height: 40px;
       top: -10px;
       width: 40px;
+    }
+  }
+
+  &-vertical {
+    height: 150px;
+    margin: 20px auto;
+    max-width: 10px;
+
+    .Slider__fill {
+      bottom: 0;
+      width: 100%;
+    }
+
+    .Slider__handle {
+      height: 10px;
+      left: -10px;
+      width: 30px;
     }
   }
 }

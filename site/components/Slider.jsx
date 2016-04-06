@@ -26,6 +26,11 @@ export class SliderDemo extends Component {
         onChange={this.handleChange}
         />
         Value: {value}
+
+        <Slider value={value} min={min} max={max} step={step} limit={limit}
+        orientation="vertical"
+        onChange={this.handleChange}
+        />
       </div>
     )
   }
