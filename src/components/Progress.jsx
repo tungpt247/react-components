@@ -8,6 +8,10 @@ const PROGRESS_TYPES = [
 export class Progress extends Component {
 
   componentDidMount() {
+    this.renderContent()
+  }
+
+  renderContent() {
     var percent = parseInt(this.props.percent)
     var deg = 360 * percent / 100
     var element = this.refs.progress
