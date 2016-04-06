@@ -1,0 +1,50 @@
+$slider-background-color: #e5e5e5;
+$slider-box-shadow: rgba(0, 0, 0, .3);
+$slider-border-color: #ccc;
+$slider-handle-fill-background-color: #1ecd97;
+
+.Slider {
+  background: $slider-background-color;
+  margin: 20px 0;
+  position: relative;
+
+  &__fill,
+  &__handle {
+    position: absolute;
+  }
+
+  &,
+  &__fill {
+    display: block;
+  }
+
+  &__handle {
+    background: darken($slider-handle-fill-background-color, 5);
+    border: 1px solid $slider-border-color;
+    cursor: pointer;
+    display: inline-block;
+
+    &:active {
+      background: darken($slider-handle-fill-background-color, 10);
+    }
+  }
+
+  &-horizontal {
+    border-radius: 10px;
+    height: 20px;
+
+    .Slider__fill {
+      background: $slider-handle-fill-background-color;
+      border-radius: 10px;
+      height: 100%;
+      top: 0;
+    }
+
+    .Slider__handle {
+      border-radius: 40px;
+      height: 40px;
+      top: -10px;
+      width: 40px;
+    }
+  }
+}
