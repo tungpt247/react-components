@@ -2,3 +2,7 @@
 @import 'vendor';
 @import 'mixins';
 @import 'components';
+
+body {
+  background-color: $medium-gray;
+}
