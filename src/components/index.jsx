@@ -1,3 +1,5 @@
 export Alert from './Alert'
 export Pagination from './Pagination'
 export Progress from './Progress'
+export Card from './Card'
+export Vital from './Vital'
